@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8EE026071CB01F36001E6D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE026061CB01F36001E6D70 /* AppDelegate.swift */; };
-		8EE026091CB01F36001E6D70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE026081CB01F36001E6D70 /* ViewController.swift */; };
 		8EE0260C1CB01F36001E6D70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0260A1CB01F36001E6D70 /* Main.storyboard */; };
 		8EE0260E1CB01F36001E6D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0260D1CB01F36001E6D70 /* Assets.xcassets */; };
 		8EE026111CB01F36001E6D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0260F1CB01F36001E6D70 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		8EE026031CB01F36001E6D70 /* DWWB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWWB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE026061CB01F36001E6D70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EE026081CB01F36001E6D70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8EE0260B1CB01F36001E6D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EE0260D1CB01F36001E6D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EE026101CB01F36001E6D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +33,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E6A12721CB0282100CC399B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E6A12751CB0282100CC399B /* Main(主要) */,
+				8E6A12741CB0282100CC399B /* Home(首页) */,
+				8E6A12761CB0282100CC399B /* Message(消息) */,
+				8E6A12731CB0282100CC399B /* Discover(发现) */,
+				8E6A12771CB0282100CC399B /* Profile(我) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8E6A12731CB0282100CC399B /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		8E6A12741CB0282100CC399B /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		8E6A12751CB0282100CC399B /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		8E6A12761CB0282100CC399B /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		8E6A12771CB0282100CC399B /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
 		8EE025FA1CB01F36001E6D70 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +99,8 @@
 		8EE026051CB01F36001E6D70 /* DWWB */ = {
 			isa = PBXGroup;
 			children = (
+				8E6A12721CB0282100CC399B /* Classes */,
 				8EE026061CB01F36001E6D70 /* AppDelegate.swift */,
-				8EE026081CB01F36001E6D70 /* ViewController.swift */,
 				8EE0260A1CB01F36001E6D70 /* Main.storyboard */,
 				8EE0260D1CB01F36001E6D70 /* Assets.xcassets */,
 				8EE0260F1CB01F36001E6D70 /* LaunchScreen.storyboard */,
@@ -135,7 +180,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EE026091CB01F36001E6D70 /* ViewController.swift in Sources */,
 				8EE026071CB01F36001E6D70 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,7 +291,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = DWWB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mvptop.DWWB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -258,7 +304,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = DWWB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mvptop.DWWB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,6 +332,7 @@
 				8EE026171CB01F36001E6D70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
