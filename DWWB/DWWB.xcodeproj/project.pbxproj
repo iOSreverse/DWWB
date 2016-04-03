@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E5EBE8B1CB0C7B200A7EADC /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E5EBE8A1CB0C7B200A7EADC /* MainVCSettings.json */; };
 		8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */; };
 		8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */; };
 		8ED1D5A91CB02FB7006B3698 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E5EBE8A1CB0C7B200A7EADC /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E5EBE871CB0B9B500A7EADC /* Tool(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Tool(工具)";
+			path = "Profile(我)/Tool(工具)";
+			sourceTree = "<group>";
+		};
+		8E5EBE881CB0BBA200A7EADC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8E5EBE8A1CB0C7B200A7EADC /* MainVCSettings.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		8E6A12721CB0282100CC399B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,6 +67,7 @@
 				8E6A12761CB0282100CC399B /* Message(消息) */,
 				8E6A12731CB0282100CC399B /* Discover(发现) */,
 				8E6A12771CB0282100CC399B /* Profile(我) */,
+				8E5EBE871CB0B9B500A7EADC /* Tool(工具) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -72,6 +91,7 @@
 		8E6A12751CB0282100CC399B /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				8E5EBE881CB0BBA200A7EADC /* Resource */,
 				8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */,
 			);
 			path = "Main(主要)";
@@ -182,6 +202,7 @@
 			files = (
 				8EE0260E1CB01F36001E6D70 /* Assets.xcassets in Resources */,
 				8EE0260C1CB01F36001E6D70 /* Main.storyboard in Resources */,
+				8E5EBE8B1CB0C7B200A7EADC /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
