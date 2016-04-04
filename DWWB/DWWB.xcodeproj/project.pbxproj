@@ -13,6 +13,9 @@
 		8E2429BC1CB1890A0081FB52 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2429BB1CB1890A0081FB52 /* Home.storyboard */; };
 		8E2429BE1CB189150081FB52 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2429BD1CB189150081FB52 /* Discover.storyboard */; };
 		8E572D441CB21DF60039B7E2 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E572D431CB21DF60039B7E2 /* UIButton-Extension.swift */; };
+		8E572D491CB230B20039B7E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E572D481CB230B20039B7E2 /* BaseViewController.swift */; };
+		8E572D4D1CB231670039B7E2 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E572D4C1CB231670039B7E2 /* VisitorView.swift */; };
+		8E572D4F1CB231880039B7E2 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E572D4E1CB231880039B7E2 /* VisitorView.xib */; };
 		8E5EBE8B1CB0C7B200A7EADC /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E5EBE8A1CB0C7B200A7EADC /* MainVCSettings.json */; };
 		8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */; };
 		8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */; };
@@ -31,6 +34,9 @@
 		8E2429BB1CB1890A0081FB52 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		8E2429BD1CB189150081FB52 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		8E572D431CB21DF60039B7E2 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		8E572D481CB230B20039B7E2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8E572D4C1CB231670039B7E2 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		8E572D4E1CB231880039B7E2 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		8E5EBE8A1CB0C7B200A7EADC /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,16 @@
 			name = Extension;
 			path = "DWWB/Classes/Tool(工具)/Extension";
 			sourceTree = SOURCE_ROOT;
+		};
+		8E572D451CB230470039B7E2 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				8E572D481CB230B20039B7E2 /* BaseViewController.swift */,
+				8E572D4C1CB231670039B7E2 /* VisitorView.swift */,
+				8E572D4E1CB231880039B7E2 /* VisitorView.xib */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
 		};
 		8E5EBE871CB0B9B500A7EADC /* Tool(工具) */ = {
 			isa = PBXGroup;
@@ -117,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				8E5EBE881CB0BBA200A7EADC /* Resource */,
+				8E572D451CB230470039B7E2 /* Visitor */,
 				8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */,
 			);
 			path = "Main(主要)";
@@ -235,6 +252,7 @@
 				8EE0260E1CB01F36001E6D70 /* Assets.xcassets in Resources */,
 				8EE0260C1CB01F36001E6D70 /* Main.storyboard in Resources */,
 				8E5EBE8B1CB0C7B200A7EADC /* MainVCSettings.json in Resources */,
+				8E572D4F1CB231880039B7E2 /* VisitorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +268,8 @@
 				8EE026071CB01F36001E6D70 /* AppDelegate.swift in Sources */,
 				8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */,
 				8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */,
+				8E572D491CB230B20039B7E2 /* BaseViewController.swift in Sources */,
+				8E572D4D1CB231670039B7E2 /* VisitorView.swift in Sources */,
 				8ED1D5A91CB02FB7006B3698 /* DiscoverViewController.swift in Sources */,
 				8ED1D5AD1CB0330B006B3698 /* HomeViewController.swift in Sources */,
 			);
