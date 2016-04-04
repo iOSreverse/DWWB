@@ -12,6 +12,7 @@
 		8E2429BA1CB185DB0081FB52 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2429B81CB185DB0081FB52 /* Null.storyboard */; };
 		8E2429BC1CB1890A0081FB52 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2429BB1CB1890A0081FB52 /* Home.storyboard */; };
 		8E2429BE1CB189150081FB52 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2429BD1CB189150081FB52 /* Discover.storyboard */; };
+		8E572D441CB21DF60039B7E2 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E572D431CB21DF60039B7E2 /* UIButton-Extension.swift */; };
 		8E5EBE8B1CB0C7B200A7EADC /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E5EBE8A1CB0C7B200A7EADC /* MainVCSettings.json */; };
 		8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */; };
 		8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */; };
@@ -29,6 +30,7 @@
 		8E2429B91CB185DB0081FB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DWWB/Base.lproj/Null.storyboard; sourceTree = SOURCE_ROOT; };
 		8E2429BB1CB1890A0081FB52 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		8E2429BD1CB189150081FB52 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		8E572D431CB21DF60039B7E2 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		8E5EBE8A1CB0C7B200A7EADC /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -53,9 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E572D421CB21DC20039B7E2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8E572D431CB21DF60039B7E2 /* UIButton-Extension.swift */,
+			);
+			name = Extension;
+			path = "DWWB/Classes/Tool(工具)/Extension";
+			sourceTree = SOURCE_ROOT;
+		};
 		8E5EBE871CB0B9B500A7EADC /* Tool(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				8E572D421CB21DC20039B7E2 /* Extension */,
 			);
 			name = "Tool(工具)";
 			path = "Profile(我)/Tool(工具)";
@@ -234,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED1D5AB1CB02FCF006B3698 /* ProfileViewController.swift in Sources */,
+				8E572D441CB21DF60039B7E2 /* UIButton-Extension.swift in Sources */,
 				8EE026071CB01F36001E6D70 /* AppDelegate.swift in Sources */,
 				8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */,
 				8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */,

@@ -10,12 +10,12 @@ import UIKit
 
 class MainViewController: UITabBarController {
 
-            // MARK: -  懒加载属性
+        // MARK: -  懒加载属性
         private lazy var imageNames : [String] = ["tabbar_home", "tabbar_message_center", "", "tabbar_discover", "tabbar_profile"]
-        private lazy var composeBtn : UIButton = UIButton()
+        private lazy var composeBtn : UIButton = UIButton(imageName: "tabbar_compose_icon_add", bgImageName: "tabbar_compose_button")
 
 
-        // MARK: - 系统函数回调
+        // MARK: - 系统函数回
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,17 +59,10 @@ extension MainViewController {
 //        1.将按钮添加到tabbar中
         tabBar.addSubview(composeBtn)
 
-//        2.设置发布按钮的内容
-        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: .Normal)
-        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: .Highlighted)
-        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: .Normal)
-        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: .Highlighted)
-        composeBtn.sizeToFit()
-
-//        3.设置发布按钮的位置
+//        2.设置发布按钮的位置
         composeBtn.center = CGPoint(x: tabBar.bounds.width * 0.5, y: tabBar.bounds.height * 0.5)
 
-//        4.监听按钮的点击
+//        3.监听按钮的点击
         composeBtn.addTarget(self, action: "composeBtnClick", forControlEvents: .TouchUpInside)
     }
 }
