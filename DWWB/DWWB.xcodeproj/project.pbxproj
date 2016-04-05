@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E28DC131CB3D6200082E044 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E28DC121CB3D6200082E044 /* MainVCSettings.json */; };
 		8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */; };
 		8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */; };
 		8ED1D5A91CB02FB7006B3698 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E28DC121CB3D6200082E044 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E28DC111CB3D6200082E044 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8E28DC121CB3D6200082E044 /* MainVCSettings.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		8E6A12721CB0282100CC399B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		8E6A12751CB0282100CC399B /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				8E28DC111CB3D6200082E044 /* Resource */,
 				8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */,
 			);
 			path = "Main(主要)";
@@ -182,6 +193,7 @@
 			files = (
 				8EE0260E1CB01F36001E6D70 /* Assets.xcassets in Resources */,
 				8EE0260C1CB01F36001E6D70 /* Main.storyboard in Resources */,
+				8E28DC131CB3D6200082E044 /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
