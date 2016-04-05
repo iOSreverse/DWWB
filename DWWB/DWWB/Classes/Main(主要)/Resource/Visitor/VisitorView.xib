@@ -30,7 +30,7 @@
                         <constraint firstAttribute="height" constant="90" id="d7l-JX-52H"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注一些人,回这里看看有什么惊喜" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R59-bQ-aKn">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注一些人,回这里看看有什么惊喜" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R59-bQ-aKn">
                     <rect key="frame" x="188" y="351" width="224" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="224" id="cbR-Le-YuZ"/>
@@ -76,6 +76,11 @@
                 <constraint firstItem="xTm-Mz-Y6w" firstAttribute="top" secondItem="N01-VE-x9b" secondAttribute="top" id="w38-2L-jvv"/>
                 <constraint firstAttribute="trailing" secondItem="Pmt-lS-cbk" secondAttribute="trailing" id="zJn-4J-iIb"/>
             </constraints>
+            <connections>
+                <outlet property="iconView" destination="R1n-pR-oOD" id="0kw-gj-IHy"/>
+                <outlet property="rotationView" destination="UtW-46-Vp2" id="fq8-5J-9OG"/>
+                <outlet property="tipLabel" destination="R59-bQ-aKn" id="Dvj-Ir-Q1i"/>
+            </connections>
             <point key="canvasLocation" x="329" y="254"/>
         </view>
     </objects>
