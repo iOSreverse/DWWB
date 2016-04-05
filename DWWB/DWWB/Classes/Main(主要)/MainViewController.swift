@@ -25,11 +25,10 @@ class MainViewController: UITabBarController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        //        1.遍历所有的item
+            //           1.遍历所有的item
         for i in 0..<tabBar.items!.count {
             //            2.获取item
             let item = tabBar.items![i]
-            print("\(item)")
 
             //            3.如果下标是2,则该item不可以和用户交互
             if i == 2 {
