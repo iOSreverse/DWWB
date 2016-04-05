@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MessageViewController: UITableViewController {
+class MessageViewController: BaseViewController {
 
 }

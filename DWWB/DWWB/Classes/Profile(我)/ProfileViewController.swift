@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ProfileViewController: UITableViewController {
+class ProfileViewController: BaseViewController {
 
 }

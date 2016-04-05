@@ -8,6 +8,6 @@
 
 import UIKit
 
-class DiscoverViewController: UITableViewController {
+class DiscoverViewController: BaseViewController {
 
 }
