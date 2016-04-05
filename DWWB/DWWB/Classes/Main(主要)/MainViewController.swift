@@ -11,37 +11,57 @@ import UIKit
 class MainViewController: UITabBarController {
 
     // MARK: - 懒加载属性
-    private lazy var imageNames = ["tabbar_home", "tabbar_message_center", "","tabbar_discover", "tabbar_profile"]
+    private lazy var composeBtn : UIButton = UIButton()
 
 
     // MARK: - 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupComposeBtn()
     }
 
-
-
-
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-
-            //           1.遍历所有的item
-        for i in 0..<tabBar.items!.count {
-            //            2.获取item
-            let item = tabBar.items![i]
-
-            //            3.如果下标是2,则该item不可以和用户交互
-            if i == 2 {
-                item.enabled = false
-                continue
-            }
-
-            //            4.设置其他item的选中时候的图片
-            item.selectedImage = UIImage(named: imageNames[i] + "_highlighted")
-            
-        }
-        
-        
 }
 
+// MARK: - 设置UI界面
+extension MainViewController {
+    ///设置发布按钮
+    private func setupComposeBtn() {
+//        1.将composeBtn添加到tabbar中
+        tabBar.addSubview(composeBtn)
+
+//        2.设置属性
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: .Normal)
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: .Highlighted)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: .Normal)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: .Highlighted)
+        composeBtn.sizeToFit()
+
+//        3.设置位置
+        composeBtn.center = CGPointMake(tabBar.center.x, tabBar.bounds.size.height * 0.5)
+
+
+
+    }
 }
+
+
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//            //           1.遍历所有的item
+//        for i in 0..<tabBar.items!.count {
+//            //            2.获取item
+//            let item = tabBar.items![i]
+//
+//            //            3.如果下标是2,则该item不可以和用户交互
+//            if i == 2 {
+//                item.enabled = false
+//                continue
+//            }
+//
+//            //            4.设置其他item的选中时候的图片
+//            item.selectedImage = UIImage(named: imageNames[i] + "_highlighted")
+//        }
+//}
+
