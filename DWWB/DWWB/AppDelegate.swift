@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        设置全局颜色
         UITabBar.appearance().tintColor = UIColor.orangeColor()
 
+//        创建window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = MainViewController()
+        window?.makeKeyWindow()
+
 
         return true
     }
