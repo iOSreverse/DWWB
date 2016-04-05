@@ -34,10 +34,20 @@ extension MainViewController {
 //        2.设置位置
         composeBtn.center = CGPointMake(tabBar.center.x, tabBar.bounds.size.height * 0.5)
 
+//        3.监听发布按钮的点击
+        composeBtn.addTarget(self, action: "composeBtnClick", forControlEvents: .TouchUpInside)
+
 
 
     }
 }
 
 
+// MARK: - 事件监听
+extension MainViewController {
+    @objc private func composeBtnClick() {
+        print("composeBtnClick")
+
+    }
+}
 
