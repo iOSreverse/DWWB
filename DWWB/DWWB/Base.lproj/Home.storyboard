@@ -7,7 +7,7 @@
         <!--首页-->
         <scene sceneID="OaU-ge-fJz">
             <objects>
-                <tableViewController id="yMe-7y-loG" sceneMemberID="viewController">
+                <tableViewController id="yMe-7y-loG" customClass="HomeViewController" customModule="DWWB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Um9-x8-X8j">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpa-kW-FRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2114" y="-2672"/>
+            <point key="canvasLocation" x="-2053" y="-2820"/>
         </scene>
         <!--首页-->
         <scene sceneID="7G6-aC-Fs9">

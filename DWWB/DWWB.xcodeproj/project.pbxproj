@@ -56,8 +56,8 @@
 		8E28DC111CB3D6200082E044 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				8E28DC121CB3D6200082E044 /* MainVCSettings.json */,
 				8E350F631CB3E65E00A71F63 /* Null.storyboard */,
+				8E28DC121CB3D6200082E044 /* MainVCSettings.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";

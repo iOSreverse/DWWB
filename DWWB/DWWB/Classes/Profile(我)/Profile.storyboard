@@ -7,7 +7,7 @@
         <!--我-->
         <scene sceneID="9v0-jD-7eY">
             <objects>
-                <tableViewController id="llK-uD-adx" sceneMemberID="viewController">
+                <tableViewController id="llK-uD-adx" customClass="ProfileViewController" customModule="DWWB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1WO-9d-J5e">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
