@@ -13,6 +13,7 @@
 		8E350F5D1CB3E3D200A71F63 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E350F5B1CB3E3D200A71F63 /* Discover.storyboard */; };
 		8E350F641CB3E65E00A71F63 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E350F631CB3E65E00A71F63 /* Null.storyboard */; };
 		8E350F681CB3E82800A71F63 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E350F671CB3E82800A71F63 /* Profile.storyboard */; };
+		8E606CB91CB4056100DBD8EC /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E606CB81CB4056100DBD8EC /* UIButton-Extension.swift */; };
 		8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */; };
 		8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */; };
 		8ED1D5A91CB02FB7006B3698 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */; };
@@ -30,6 +31,7 @@
 		8E350F5C1CB3E3D200A71F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		8E350F631CB3E65E00A71F63 /* Null.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Null.storyboard; sourceTree = "<group>"; };
 		8E350F671CB3E82800A71F63 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		8E606CB81CB4056100DBD8EC /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,22 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		8E606CB61CB404E700DBD8EC /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+				8E606CB71CB404E700DBD8EC /* Categoy */,
+			);
+			path = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		8E606CB71CB404E700DBD8EC /* Categoy */ = {
+			isa = PBXGroup;
+			children = (
+				8E606CB81CB4056100DBD8EC /* UIButton-Extension.swift */,
+			);
+			path = Categoy;
+			sourceTree = "<group>";
+		};
 		8E6A12721CB0282100CC399B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +88,7 @@
 				8E6A12761CB0282100CC399B /* Message(消息) */,
 				8E6A12731CB0282100CC399B /* Discover(发现) */,
 				8E6A12771CB0282100CC399B /* Profile(我) */,
+				8E606CB61CB404E700DBD8EC /* Tools(工具) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -225,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED1D5AB1CB02FCF006B3698 /* ProfileViewController.swift in Sources */,
+				8E606CB91CB4056100DBD8EC /* UIButton-Extension.swift in Sources */,
 				8EE026071CB01F36001E6D70 /* AppDelegate.swift in Sources */,
 				8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */,
 				8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */,
