@@ -24,21 +24,21 @@ class HomeViewController: BaseViewController {
             return
         }
 //        2.设置导航栏的内容
-        setupComposeBtn()
+        setupNavigationBar()
     }
 
 }
 
 // MARK: - 设置UI界面
 extension HomeViewController {
-    private func setupComposeBtn() {
+    private func setupNavigationBar() {
 //        1.设置左侧的Item
-        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendattention_highlighted")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendattention")
 //        2.设置右的Item
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop")
 //        3.设置titleView
         titleBtn.setTitle("iOSreverse", forState: .Normal)
-        titleBtn.addTarget(self, action: "titleBtnClick", forControlEvents: .TouchUpInside)
+        titleBtn.addTarget(self, action: "titleBtnClick:", forControlEvents: .TouchUpInside)
         navigationItem.titleView = titleBtn
     }
 }
@@ -47,7 +47,18 @@ extension HomeViewController {
 // MARK: - 事件监听的函数
 extension HomeViewController {
     @objc private func titleBtnClick(titleBtn : TitleButton) {
+//        1.改变按钮的状态
         titleBtn.selected = !titleBtn.selected
-        
+
+//        2.创建弹出的控制器
+        let popoverVc = PopoverViewController()
+
+//        3.设置控制器的modal样式
+        popoverVc.modalPresentationStyle = .Custom
+
+//        4.弹出控制器
+        presentViewController(popoverVc, animated: true, completion: nil)
+
+
     }
 }
