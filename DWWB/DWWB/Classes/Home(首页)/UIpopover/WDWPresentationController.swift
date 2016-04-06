@@ -9,8 +9,13 @@
 import UIKit
 
 class WDWPresentationController: UIPresentationController {
+    // MARK: - 对外提供属性
+    var presentedFrame : CGRect = CGRectZero
+
+
     // MARK: - 懒加载属性
     private lazy var coverView : UIView = UIView()
+
     // MARK: - 系统回调函数
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()

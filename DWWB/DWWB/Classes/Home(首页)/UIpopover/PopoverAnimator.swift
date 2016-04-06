@@ -11,24 +11,42 @@ import UIKit
 class PopoverAnimator: NSObject {
     
     var isPresented : Bool = false
+    var presentedFrame : CGRect = CGRectZero
+
+    var callBack : ((presented : Bool) -> ())?
+
+    // MARK: - 自定义构造函数
+    init(callBack : (presented : Bool) -> ()) {
+        self.callBack = callBack
+    }
 }
 
 // MARK: - 自定义转场代理的方法
 extension PopoverAnimator : UIViewControllerTransitioningDelegate {
     //    目的:改变弹出view的尺寸
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        return WDWPresentationController(presentedViewController: presented, presentingViewController: presenting)
+
+        let presention = WDWPresentationController(presentedViewController: presented, presentingViewController: presenting)
+        presention.presentedFrame = presentedFrame
+
+        return presention
     }
 
     //    目的:自定义弹出的动画
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
         isPresented = true
+        callBack!(presented: isPresented)
+
         return self
     }
 
     //    目的:自定义消失的动画
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
         isPresented = false
+        callBack!(presented: isPresented)
+
         return self
     }
 

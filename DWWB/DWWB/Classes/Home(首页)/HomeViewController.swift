@@ -12,7 +12,9 @@ class HomeViewController: BaseViewController {
     
     // MARK: - 懒加载属性
     private lazy var titleBtn : TitleButton = TitleButton()
-    private lazy var popoverAnimator : PopoverAnimator = PopoverAnimator()
+    private lazy var popoverAnimator : PopoverAnimator = PopoverAnimator {[weak self] (presented) -> () in
+        self?.titleBtn.selected = presented
+    }
 
 
     // MARK: - 系统回调函数
@@ -61,6 +63,7 @@ extension HomeViewController {
 
         //4.设置转场的代理
         popoverVc.transitioningDelegate = popoverAnimator
+        popoverAnimator.presentedFrame = CGRect(x: 100, y: 55, width: 180, height: 250)
 
 //        弹出控制器
         presentViewController(popoverVc, animated: true, completion: nil)
