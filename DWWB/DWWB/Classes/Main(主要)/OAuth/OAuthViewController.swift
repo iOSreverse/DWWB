@@ -23,7 +23,7 @@ class OAuthViewController: UIViewController {
         setupNavigationBar()
 
 //        加载网页
-        webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://www.mvptop.com")!))
+        loadPage()
 
     }
 
@@ -41,6 +41,22 @@ extension OAuthViewController {
 //        3.设置标题
         title = "登录页面"
     }
+
+    private func loadPage() {
+//        1.获取登录页面的URLString
+        let urlString = "https://api.weibo.com/oauth2/authorize?client_id=\(app_key)&redirect_uri=\(redirect_uri)"
+
+//        2.创建对应NSURL
+        guard let url = NSURL(string: urlString) else {
+            return
+        }
+
+//        3.创建NSURLRequest
+        let request = NSURLRequest(URL: url)
+
+//        4.加载request对象
+        webView.loadRequest(request)
+    }
 }
 
 
@@ -51,6 +67,9 @@ extension OAuthViewController {
     }
 
     @objc private func fillItemClick() {
-        print("fillItemClick")
+//        1.书写js代码 : 
+        let jsCode = "document.getElementById('userId').value='18533675618';document.getElementById('passwd').value='weibo386675';"
+//        2.执行js代码
+        webView.stringByEvaluatingJavaScriptFromString(jsCode)
     }
 }
