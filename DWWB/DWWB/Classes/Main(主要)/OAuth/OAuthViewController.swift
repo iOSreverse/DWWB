@@ -91,6 +91,28 @@ extension OAuthViewController : UIWebViewDelegate {
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         SVProgressHUD.dismiss()
     }
+
+//    当准备加载某一个页面时,会执行该方法
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+
+//        1.获取加载网页的NSURL
+        guard let url = request.URL else {
+            return true
+        }
+
+//        2.获取url中的字符串
+        let urlString = url.absoluteString
+
+//        3.判断该字符串中是否包含code
+        guard urlString.containsString("code=") else {
+            return true
+        }
+
+//        4.将code截取出来
+        let code = urlString.componentsSeparatedByString("code=").last!
+
+        return false
+    }
 }
 
 
