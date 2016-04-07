@@ -77,7 +77,8 @@ extension OAuthViewController {
 
 // MARK: - webView的delegate方法
 extension OAuthViewController : UIWebViewDelegate {
-//    webView开始加载网页
+
+    //    webView开始加载网页
     func webViewDidStartLoad(webView: UIWebView) {
         SVProgressHUD.show()
     }
@@ -91,6 +92,9 @@ extension OAuthViewController : UIWebViewDelegate {
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         SVProgressHUD.dismiss()
     }
+
+
+
 
 //    当准备加载某一个页面时,会执行该方法
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -111,11 +115,39 @@ extension OAuthViewController : UIWebViewDelegate {
 //        4.将code截取出来
         let code = urlString.componentsSeparatedByString("code=").last!
 
+        //5.请求accessToken
+        loadAccessToken(code)
+
         return false
     }
 }
 
+// MARK: - 请求数据
+extension OAuthViewController {
+    ///请求AccessToken
+    private func loadAccessToken(code : String) {
+        NetworkTools.shareInstance.loadAccessToken(code) { (result, error) -> () in
+            //1.错误校验
+            if error != nil {
+                print(error)
+                return
+            }
 
+            //2.拿到结果
+            guard let accountDict = result else {
+                print("没有获取授权后的数据")
+                return
+            }
+
+            //3.将字典转成模型
+            let account = UserAccount(dict: accountDict)
+
+            print(account)
+
+        }
+    }
+
+}
 
 
 

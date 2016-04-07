@@ -14,10 +14,10 @@ enum RequestType : String {
     case POST = "POST"
 }
 
-class NewworkTools: AFHTTPSessionManager {
+class NetworkTools: AFHTTPSessionManager {
     //    let是线程安全的
-    static let shareInstance : NewworkTools = {
-        let tools = NewworkTools()
+    static let shareInstance : NetworkTools = {
+        let tools = NetworkTools()
         tools.responseSerializer.acceptableContentTypes?.insert("text/html")
         tools.responseSerializer.acceptableContentTypes?.insert("text/plain")
 
@@ -27,7 +27,7 @@ class NewworkTools: AFHTTPSessionManager {
 }
 
 // MARK: - 封装请求方法
-extension NewworkTools {
+extension NetworkTools {
     func required(methodType : RequestType,urlString : String, parameters : [String : AnyObject], finished : (result : AnyObject?, error : NSError?) -> ()) {
         //        1.定义成功的回调闭包
         let successCallBack = { (task : NSURLSessionDataTask, result : AnyObject?) -> Void in
@@ -50,7 +50,7 @@ extension NewworkTools {
 }
 
 // MARK: - 请求AccessToken
-extension NewworkTools {
+extension NetworkTools {
     func loadAccessToken(code : String, finished : (result : [String : AnyObject]?, error : NSError?) -> ()) {
         //1.获取请求的URLString
         let urlString = "https://api.weibo.com/oauth2/access_token"
