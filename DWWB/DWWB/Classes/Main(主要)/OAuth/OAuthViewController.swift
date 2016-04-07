@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 
 class OAuthViewController: UIViewController {
@@ -73,3 +74,59 @@ extension OAuthViewController {
         webView.stringByEvaluatingJavaScriptFromString(jsCode)
     }
 }
+
+// MARK: - webView的delegate方法
+extension OAuthViewController : UIWebViewDelegate {
+//    webView开始加载网页
+    func webViewDidStartLoad(webView: UIWebView) {
+        SVProgressHUD.show()
+    }
+
+//    webView网页加载完成
+    func webViewDidFinishLoad(webView: UIWebView) {
+        SVProgressHUD.dismiss()
+    }
+
+//    webView加载网页失败
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        SVProgressHUD.dismiss()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
