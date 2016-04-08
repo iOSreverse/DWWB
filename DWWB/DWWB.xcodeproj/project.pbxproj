@@ -36,6 +36,7 @@
 		8EE026071CB01F36001E6D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE026061CB01F36001E6D70 /* AppDelegate.swift */; };
 		8EE0260C1CB01F36001E6D70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0260A1CB01F36001E6D70 /* Main.storyboard */; };
 		8EE0260E1CB01F36001E6D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0260D1CB01F36001E6D70 /* Assets.xcassets */; };
+		8EF3D0FD1CB7FE5E00A2D396 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3D0FC1CB7FE5E00A2D396 /* UserAccountViewModel.swift */; };
 		CBB902BE70E0A4D9ABAB9A0D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DEEFF685A93C5041AD7F1D /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		8EE0260B1CB01F36001E6D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EE0260D1CB01F36001E6D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EE026121CB01F36001E6D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EF3D0FC1CB7FE5E00A2D396 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		A9DEEFF685A93C5041AD7F1D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46AE46466C04B403A0CD308 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				8E327C3A1CB602DC00613314 /* OAuthViewController.xib */,
 				8E327C391CB602DC00613314 /* OAuthViewController.swift */,
 				8E327C431CB6496800613314 /* UserAccount.swift */,
+				8EF3D0FC1CB7FE5E00A2D396 /* UserAccountViewModel.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				8E606CBC1CB4118D00DBD8EC /* BaseViewController.swift in Sources */,
 				8E6939651CB54F7900C0123C /* PopoverAnimator.swift in Sources */,
 				8E25EBEB1CB5301900C16828 /* WDWPresentationController.swift in Sources */,
+				8EF3D0FD1CB7FE5E00A2D396 /* UserAccountViewModel.swift in Sources */,
 				8E606CBE1CB411C900DBD8EC /* VisitorView.swift in Sources */,
 				8E327C461CB6729800613314 /* NetworkTools.swift in Sources */,
 				8ED1D5A91CB02FB7006B3698 /* DiscoverViewController.swift in Sources */,
