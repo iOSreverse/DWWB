@@ -174,11 +174,17 @@ extension OAuthViewController {
             }
 
             //3.从字典中取出昵称和用户头像地址
-//            account.screen_name = userInfoDict["screen_name"] as? string
-//            account.screen_large = userInfoDict["avatar_large"] as? String
             account.screen_name = userInfoDict["screen_name"] as? String
             account.avatar_large = userInfoDict["avatar_large"] as? String
-            print(account)
+
+            //4.将account对象保存
+            //4.1.获取沙盒路径
+            var accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+            accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
+            print(accountPath)
+
+            //4.2.保存对象
+            NSKeyedArchiver.archiveRootObject(account, toFile: accountPath)
 
         }
     }
