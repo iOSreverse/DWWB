@@ -13,6 +13,7 @@
 		8E25EBE91CB521D500C16828 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E25EBE71CB521D500C16828 /* PopoverViewController.xib */; };
 		8E25EBEB1CB5301900C16828 /* WDWPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25EBEA1CB5301900C16828 /* WDWPresentationController.swift */; };
 		8E28DC131CB3D6200082E044 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E28DC121CB3D6200082E044 /* MainVCSettings.json */; };
+		8E2A992D1CB92826005E2139 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A992C1CB92826005E2139 /* Status.swift */; };
 		8E327C3B1CB602DC00613314 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E327C391CB602DC00613314 /* OAuthViewController.swift */; };
 		8E327C3C1CB602DC00613314 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E327C3A1CB602DC00613314 /* OAuthViewController.xib */; };
 		8E327C401CB6359900613314 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E327C3F1CB6359900613314 /* Common.swift */; };
@@ -50,6 +51,7 @@
 		8E25EBE71CB521D500C16828 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		8E25EBEA1CB5301900C16828 /* WDWPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDWPresentationController.swift; sourceTree = "<group>"; };
 		8E28DC121CB3D6200082E044 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		8E2A992C1CB92826005E2139 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		8E327C391CB602DC00613314 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		8E327C3A1CB602DC00613314 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		8E327C3F1CB6359900613314 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		8E2A992B1CB92768005E2139 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A992C1CB92826005E2139 /* Status.swift */,
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
 		8E327C341CB5F0E600613314 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				8E25EBE51CB5219A00C16828 /* UIpopover */,
+				8E2A992B1CB92768005E2139 /* HomeModel */,
 				8E350F531CB3E38700A71F63 /* Home.storyboard */,
 				8ED1D5AC1CB0330B006B3698 /* HomeViewController.swift */,
 			);
@@ -408,6 +419,7 @@
 			files = (
 				8E327C401CB6359900613314 /* Common.swift in Sources */,
 				8EF3D1001CB80C6F00A2D396 /* WelcomeViewController.swift in Sources */,
+				8E2A992D1CB92826005E2139 /* Status.swift in Sources */,
 				8E327C441CB6496800613314 /* UserAccount.swift in Sources */,
 				8ED1D5AB1CB02FCF006B3698 /* ProfileViewController.swift in Sources */,
 				8E606CB91CB4056100DBD8EC /* UIButton-Extension.swift in Sources */,
