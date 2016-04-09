@@ -17,9 +17,8 @@ class UserAccountViewModel {
 
     // MARK: - 计算属性
     var accountPath : String {
-        var accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
-        accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
-        return accountPath
+        let accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+        return (accountPath as NSString).stringByAppendingPathComponent("account.plist")
     }
 
     var isLogin : Bool {

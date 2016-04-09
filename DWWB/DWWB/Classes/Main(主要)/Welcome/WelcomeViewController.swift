@@ -23,15 +23,15 @@ class WelcomeViewController: UIViewController {
 
         let url = NSURL(string: profileURLString ?? "")
         iconView.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar_default_big"))
-//            iconView.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar_default_big"))
 
         //1.改变约束的值
-        iconViewBottomCons.constant = UIScreen.mainScreen().bounds.height - 250
+        iconViewBottomCons.constant = UIScreen.mainScreen().bounds.height - 200
 
         //2.执行动画
-        UIView.animateWithDuration(5.0, delay: 0.0, usingSpringWithDamping: 0.0001, initialSpringVelocity: 5.0, options: [], animations: { () -> Void in
+        UIView.animateWithDuration(1.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5.0, options: [], animations: { () -> Void in
             self.view.layoutIfNeeded()
             }) { (_) -> Void in
+                UIApplication.sharedApplication().keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         }
     }
 }

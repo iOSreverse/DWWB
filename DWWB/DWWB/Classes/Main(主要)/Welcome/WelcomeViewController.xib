@@ -6,8 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="DWWB" customModuleProvider="target">
             <connections>
-                <outlet property="iaconViewBottomCons" destination="1bc-1H-Nej" id="Whc-er-VZz"/>
                 <outlet property="iconView" destination="u2a-Vj-TjG" id="epb-FN-1dh"/>
+                <outlet property="iconViewBottomCons" destination="1bc-1H-Nej" id="M1g-nQ-9xB"/>
+                <outlet property="view" destination="MOw-VV-TUf" id="KUf-7C-DBq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
