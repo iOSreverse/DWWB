@@ -11,7 +11,7 @@ import UIKit
 class UserAccount: NSObject {
     // MARK: - 属性
     ///授权AccessToken
-    var access_token : String?
+    var access_token : String?     //2.00GL8L7CQ2aQ7B9e18005403PZMoID
     ///过期时间-->秒
     var expires_in : NSTimeInterval = 0.0 {
         didSet {
@@ -59,6 +59,7 @@ class UserAccount: NSObject {
     ///归档方法
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(access_token, forKey: "access_token")
+        print(access_token)
         aCoder.encodeObject(uid, forKey: "uid")
         aCoder.encodeObject(expires_date, forKey: "expires_date")
         aCoder.encodeObject(avatar_large, forKey: "avatar_large")
