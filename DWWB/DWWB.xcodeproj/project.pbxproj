@@ -27,6 +27,7 @@
 		8E350F641CB3E65E00A71F63 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E350F631CB3E65E00A71F63 /* Null.storyboard */; };
 		8E350F681CB3E82800A71F63 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E350F671CB3E82800A71F63 /* Profile.storyboard */; };
 		8E3580B71CB9DF890098B7BD /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3580B61CB9DF890098B7BD /* StatusViewModel.swift */; };
+		8E3580BB1CB9F9E40098B7BD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3580BA1CB9F9E40098B7BD /* HomeCell.swift */; };
 		8E606CB91CB4056100DBD8EC /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E606CB81CB4056100DBD8EC /* UIButton-Extension.swift */; };
 		8E606CBC1CB4118D00DBD8EC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E606CBB1CB4118D00DBD8EC /* BaseViewController.swift */; };
 		8E606CBE1CB411C900DBD8EC /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E606CBD1CB411C900DBD8EC /* VisitorView.swift */; };
@@ -68,6 +69,7 @@
 		8E350F631CB3E65E00A71F63 /* Null.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Null.storyboard; sourceTree = "<group>"; };
 		8E350F671CB3E82800A71F63 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		8E3580B61CB9DF890098B7BD /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		8E3580BA1CB9F9E40098B7BD /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "DWWB/Classes/Home(首页)/HomeCell.swift"; sourceTree = SOURCE_ROOT; };
 		8E606CB81CB4056100DBD8EC /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		8E606CBB1CB4118D00DBD8EC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8E606CBD1CB411C900DBD8EC /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				8E2A992B1CB92768005E2139 /* HomeModel */,
 				8E350F531CB3E38700A71F63 /* Home.storyboard */,
 				8ED1D5AC1CB0330B006B3698 /* HomeViewController.swift */,
+				8E3580BA1CB9F9E40098B7BD /* HomeCell.swift */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */,
 				8E0E336D1CB947550095FD66 /* NSDate-Extension.swift in Sources */,
 				8E606CBC1CB4118D00DBD8EC /* BaseViewController.swift in Sources */,
+				8E3580BB1CB9F9E40098B7BD /* HomeCell.swift in Sources */,
 				8E6939651CB54F7900C0123C /* PopoverAnimator.swift in Sources */,
 				8E25EBEB1CB5301900C16828 /* WDWPresentationController.swift in Sources */,
 				8E3580B71CB9DF890098B7BD /* StatusViewModel.swift in Sources */,
