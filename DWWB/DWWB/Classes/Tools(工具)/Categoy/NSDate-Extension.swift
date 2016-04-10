@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSData {
+extension NSDate {
     class func createDateString(createAtStr : String) -> String {
         // 1.创建时间格式化对象
         let fmt = NSDateFormatter()

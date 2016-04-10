@@ -26,6 +26,7 @@
 		8E350F5D1CB3E3D200A71F63 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E350F5B1CB3E3D200A71F63 /* Discover.storyboard */; };
 		8E350F641CB3E65E00A71F63 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E350F631CB3E65E00A71F63 /* Null.storyboard */; };
 		8E350F681CB3E82800A71F63 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E350F671CB3E82800A71F63 /* Profile.storyboard */; };
+		8E3580B71CB9DF890098B7BD /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3580B61CB9DF890098B7BD /* StatusViewModel.swift */; };
 		8E606CB91CB4056100DBD8EC /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E606CB81CB4056100DBD8EC /* UIButton-Extension.swift */; };
 		8E606CBC1CB4118D00DBD8EC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E606CBB1CB4118D00DBD8EC /* BaseViewController.swift */; };
 		8E606CBE1CB411C900DBD8EC /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E606CBD1CB411C900DBD8EC /* VisitorView.swift */; };
@@ -66,6 +67,7 @@
 		8E350F5C1CB3E3D200A71F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		8E350F631CB3E65E00A71F63 /* Null.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Null.storyboard; sourceTree = "<group>"; };
 		8E350F671CB3E82800A71F63 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		8E3580B61CB9DF890098B7BD /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		8E606CB81CB4056100DBD8EC /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		8E606CBB1CB4118D00DBD8EC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8E606CBD1CB411C900DBD8EC /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				8E2A992C1CB92826005E2139 /* Status.swift */,
 				8E0E336E1CB95AD90095FD66 /* User.swift */,
+				8E3580B61CB9DF890098B7BD /* StatusViewModel.swift */,
 			);
 			path = HomeModel;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				8E606CBC1CB4118D00DBD8EC /* BaseViewController.swift in Sources */,
 				8E6939651CB54F7900C0123C /* PopoverAnimator.swift in Sources */,
 				8E25EBEB1CB5301900C16828 /* WDWPresentationController.swift in Sources */,
+				8E3580B71CB9DF890098B7BD /* StatusViewModel.swift in Sources */,
 				8EF3D0FD1CB7FE5E00A2D396 /* UserAccountViewModel.swift in Sources */,
 				8E606CBE1CB411C900DBD8EC /* VisitorView.swift in Sources */,
 				8E327C461CB6729800613314 /* NetworkTools.swift in Sources */,
