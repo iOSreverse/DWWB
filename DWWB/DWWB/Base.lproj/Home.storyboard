@@ -83,7 +83,14 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="contentLabelWcons" destination="t58-3P-8Lz" id="5hd-xm-MYa"/>
+                                    <outlet property="contentLabel" destination="LEy-Jr-s8d" id="45K-GZ-RTd"/>
+                                    <outlet property="contentLabelWcons" destination="t58-3P-8Lz" id="xkh-Av-VhC"/>
+                                    <outlet property="iconView" destination="tUF-e4-S2m" id="LgJ-cf-GPY"/>
+                                    <outlet property="screenNameLabel" destination="3tH-HO-GJV" id="KH7-C1-iXr"/>
+                                    <outlet property="sourceLabel" destination="iXK-Yg-S1K" id="J92-pz-fZI"/>
+                                    <outlet property="timeLabel" destination="ioM-nf-0Oi" id="qoK-q3-CmP"/>
+                                    <outlet property="verifiedView" destination="wvo-HT-TsK" id="wPf-eU-P5V"/>
+                                    <outlet property="vipView" destination="WXh-ha-TNS" id="uiP-CN-6aV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -113,11 +113,11 @@ extension HomeViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // 1.创建cell
-        let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell") as! HomeViewCell
 
         // 2.给cell设置数据
-        let viewModel = viewModels[indexPath.row]
-        cell.textLabel?.text = viewModel.sourceText
+        cell.viewModel = viewModels[indexPath.row]
+
 
 
         return cell
