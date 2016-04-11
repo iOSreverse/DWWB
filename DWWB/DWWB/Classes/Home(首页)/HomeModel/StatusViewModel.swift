@@ -18,6 +18,7 @@ class StatusViewModel: NSObject {
     var vipImage : UIImage?         //处理用户会员等级
     var profileURL : NSURL?         //处理用户头像的地址
     var picURLs : [NSURL] = [NSURL]() //处理微博配图的数据
+    
 
     // MARK: - 自定义构造函数
     init(status : Status) {

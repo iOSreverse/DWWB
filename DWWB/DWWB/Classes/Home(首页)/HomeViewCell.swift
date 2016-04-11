@@ -22,6 +22,9 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var picView: PicCollectionView!
+    
+
 
     // MARK: - 约束的属性
     @IBOutlet weak var contentLabelWcons: NSLayoutConstraint!
@@ -61,6 +64,9 @@ class HomeViewCell: UITableViewCell {
             let picViewSize = calculatePicViewSize(viewModel.picURLs.count)
             picViewHCons.constant = picViewSize.height
             picViewWCons.constant = picViewSize.width
+
+            // 10.将picViewURL数据传递给picView
+            picView.picURLs = viewModel.picURLs
         }
     }
 
@@ -70,6 +76,11 @@ class HomeViewCell: UITableViewCell {
 
         // 设置微博正文的宽度约束
         contentLabelWcons.constant = UIScreen.mainScreen().bounds.width - 2 * edgeMargin
+
+        // 取出picView对应的layput
+        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
+        let imageViewWH = (UIScreen.mainScreen().bounds.width - 2 * edgeMargin - 2 * itemMargin) / 3
+        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
     }
 }
 
