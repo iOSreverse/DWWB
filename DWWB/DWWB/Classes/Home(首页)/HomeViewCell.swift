@@ -77,10 +77,7 @@ class HomeViewCell: UITableViewCell {
         // 设置微博正文的宽度约束
         contentLabelWcons.constant = UIScreen.mainScreen().bounds.width - 2 * edgeMargin
 
-        // 取出picView对应的layput
-        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
-        let imageViewWH = (UIScreen.mainScreen().bounds.width - 2 * edgeMargin - 2 * itemMargin) / 3
-        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
+
     }
 }
 
@@ -92,23 +89,41 @@ extension HomeViewCell {
             return CGSizeZero
         }
 
-        // 2.计算出来imageViewWH
+        // 2.取出picView对应的layput
+        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
+
+        // 3.单张图片
+        if count == 1 {
+            // 1.取出图片
+            let urlString = viewModel?.picURLs.last?.absoluteString
+            let image = SDWebImageManager.sharedManager().imageCache.imageFromDiskCacheForKey(urlString)
+
+            // 2.设置一张图片是layout的itemSize
+            layout.itemSize = CGSize(width: image.size.width * 2, height: image.size.height * 2)
+
+            return CGSize(width: image.size.width * 2, height: image.size.height * 2)
+        }
+
+        // 4.计算出来imageViewWH
         let imageViewWH = (UIScreen.mainScreen().bounds.width - 2 * edgeMargin - 2 * itemMargin) / 3
 
-        // 3.四张配图
+        // 5.设置其他张图片时layout的itemSize
+        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
+
+        // 6.四张配图
         if count == 4 {
             let picViewWH = imageViewWH * 2 + itemMargin
             return CGSize(width: picViewWH, height: picViewWH)
         }
 
-        // 4.其他张配图
-        // 4.1.计算行数
+        // 7.其他张配图
+        // 7.1.计算行数
         let rows = CGFloat((count - 1) / 3 + 1)
 
-        // 4.2.计算picView的高度
+        // 7.2.计算picView的高度
         let picViewH = rows * imageViewWH + (rows - 1) * edgeMargin
 
-        // 4.3.计算picView的宽度
+        // 7.3.计算picView的宽度
         let picViewW = UIScreen.mainScreen().bounds.width - 2 * edgeMargin
 
         return CGSize(width: picViewW, height: picViewH)
