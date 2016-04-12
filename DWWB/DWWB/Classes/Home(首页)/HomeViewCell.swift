@@ -23,6 +23,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var picView: PicCollectionView!
+    @IBOutlet weak var retweetedBgView: UIView!
     
 
 
@@ -72,11 +73,18 @@ class HomeViewCell: UITableViewCell {
 
             // 11.设置转发微博的正文
             if viewModel.status?.retweeted_status != nil {
+                // 1.设置转发微博的正文
                 if let screenName = viewModel.status?.retweeted_status?.user?.screen_name, retweetedText = viewModel.status?.retweeted_status?.text {
                     retweetedContentLabel.text = "@" + "\(screenName) :" + retweetedText
                 }
+                // 2.设置背景显示
+                retweetedBgView.hidden = false
             } else {
+                // 1.设置转发微博的正文
                 retweetedContentLabel.text = nil
+
+                // 2.设置背景显示
+                retweetedBgView.hidden = true
             }
         }
     }

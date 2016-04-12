@@ -60,20 +60,17 @@ extension HomeViewController {
 // MARK: - 事件监听的函数
 extension HomeViewController {
     @objc private func titleBtnClick(titleBtn : TitleButton) {
-//        1.改变按钮的状态
-        titleBtn.selected = !titleBtn.selected
-
-//        2.创建弹出的控制器
+//        1.创建弹出的控制器
         let popoverVc = PopoverViewController()
 
-//        3.设置控制器的modal样式
+//        2.设置控制器的modal样式
         popoverVc.modalPresentationStyle = .Custom
 
-        //4.设置转场的代理
+        //3.设置转场的代理
         popoverVc.transitioningDelegate = popoverAnimator
         popoverAnimator.presentedFrame = CGRect(x: 100, y: 55, width: 180, height: 250)
 
-//        弹出控制器
+//        4.弹出控制器
         presentViewController(popoverVc, animated: true, completion: nil)
 
 

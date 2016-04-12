@@ -55,7 +55,20 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCQ-kH-Hgk">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xve-Ba-Vgx" userLabel="转发的背景">
+                                            <rect key="frame" x="0.0" y="206" width="600" height="151"/>
+                                            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="今天适合敲代码" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEy-Jr-s8d" userLabel="微博正文">
+                                            <rect key="frame" x="15" y="65" width="105" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="105" id="t58-3P-8Lz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCQ-kH-Hgk" userLabel="底部工具栏">
                                             <rect key="frame" x="0.0" y="357" width="600" height="40"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5Z-2V-7qN">
@@ -138,7 +151,7 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-Rc-778" userLabel="Pic View" customClass="PicCollectionView" customModule="DWWB" customModuleProvider="target">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-Rc-778" userLabel="图片的View" customClass="PicCollectionView" customModule="DWWB" customModuleProvider="target">
                                             <rect key="frame" x="15" y="252" width="392" height="95"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -177,19 +190,10 @@
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天我来敲代码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-9X-U6W">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天我来敲代码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-9X-U6W" userLabel="转发正文">
                                             <rect key="frame" x="15" y="221" width="105" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="今天适合敲代码" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEy-Jr-s8d" userLabel="微博正文">
-                                            <rect key="frame" x="15" y="53" width="105" height="77"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="105" id="t58-3P-8Lz"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -199,10 +203,12 @@
                                         <constraint firstItem="LEy-Jr-s8d" firstAttribute="leading" secondItem="tUF-e4-S2m" secondAttribute="leading" id="Cbn-VG-5yo"/>
                                         <constraint firstItem="2y2-9X-U6W" firstAttribute="leading" secondItem="tUF-e4-S2m" secondAttribute="leading" id="Cbs-FN-pcq"/>
                                         <constraint firstItem="WXh-ha-TNS" firstAttribute="leading" secondItem="3tH-HO-GJV" secondAttribute="trailing" constant="8" id="DqJ-Hs-95y"/>
+                                        <constraint firstAttribute="trailing" secondItem="xve-Ba-Vgx" secondAttribute="trailing" id="GSK-zo-GCL"/>
                                         <constraint firstItem="D8V-Rc-778" firstAttribute="leading" secondItem="tUF-e4-S2m" secondAttribute="leading" id="J7C-Xp-PCE"/>
                                         <constraint firstItem="D8V-Rc-778" firstAttribute="top" secondItem="LEy-Jr-s8d" secondAttribute="bottom" constant="10" id="K77-7E-ea6"/>
                                         <constraint firstItem="wvo-HT-TsK" firstAttribute="bottom" secondItem="tUF-e4-S2m" secondAttribute="bottom" id="LZT-EU-tO2"/>
                                         <constraint firstItem="ioM-nf-0Oi" firstAttribute="leading" secondItem="3tH-HO-GJV" secondAttribute="leading" id="Lpj-HI-Jls"/>
+                                        <constraint firstItem="OCQ-kH-Hgk" firstAttribute="top" secondItem="xve-Ba-Vgx" secondAttribute="bottom" id="NIh-Co-Wm3"/>
                                         <constraint firstItem="iXK-Yg-S1K" firstAttribute="top" secondItem="ioM-nf-0Oi" secondAttribute="top" id="NtI-I1-K4l"/>
                                         <constraint firstItem="3tH-HO-GJV" firstAttribute="leading" secondItem="tUF-e4-S2m" secondAttribute="trailing" constant="15" id="Q9A-MJ-Ags"/>
                                         <constraint firstAttribute="bottom" secondItem="OCQ-kH-Hgk" secondAttribute="bottom" id="TAC-rv-Zz9"/>
@@ -216,6 +222,8 @@
                                         <constraint firstItem="2y2-9X-U6W" firstAttribute="top" secondItem="LEy-Jr-s8d" secondAttribute="bottom" constant="15" id="nn4-QY-zFN"/>
                                         <constraint firstItem="iXK-Yg-S1K" firstAttribute="leading" secondItem="ioM-nf-0Oi" secondAttribute="trailing" constant="8" id="oFQ-Sv-xWs"/>
                                         <constraint firstItem="D8V-Rc-778" firstAttribute="top" secondItem="2y2-9X-U6W" secondAttribute="bottom" constant="10" id="q7Z-oQ-KiR"/>
+                                        <constraint firstItem="xve-Ba-Vgx" firstAttribute="top" secondItem="LEy-Jr-s8d" secondAttribute="bottom" id="tqA-MB-jlH"/>
+                                        <constraint firstItem="xve-Ba-Vgx" firstAttribute="leading" secondItem="Jjd-ft-5UN" secondAttribute="leading" id="ujQ-qr-Gxf"/>
                                         <constraint firstItem="LEy-Jr-s8d" firstAttribute="top" secondItem="tUF-e4-S2m" secondAttribute="bottom" constant="15" id="vHU-yN-G82"/>
                                         <constraint firstItem="WXh-ha-TNS" firstAttribute="centerY" secondItem="3tH-HO-GJV" secondAttribute="centerY" id="vjb-pG-ymh"/>
                                         <constraint firstItem="LEy-Jr-s8d" firstAttribute="top" secondItem="iXK-Yg-S1K" secondAttribute="bottom" constant="15" id="x1m-JJ-ApU"/>
@@ -236,6 +244,7 @@
                                     <outlet property="picView" destination="D8V-Rc-778" id="Rbi-jQ-hLq"/>
                                     <outlet property="picViewHCons" destination="lAz-4o-smN" id="D7n-SY-y1O"/>
                                     <outlet property="picViewWCons" destination="fk1-by-aHE" id="qXu-oq-pM5"/>
+                                    <outlet property="retweetedBgView" destination="xve-Ba-Vgx" id="2oq-9H-JIS"/>
                                     <outlet property="retweetedContentLabel" destination="2y2-9X-U6W" id="41h-31-XJf"/>
                                     <outlet property="screenNameLabel" destination="3tH-HO-GJV" id="KH7-C1-iXr"/>
                                     <outlet property="sourceLabel" destination="iXK-Yg-S1K" id="J92-pz-fZI"/>
