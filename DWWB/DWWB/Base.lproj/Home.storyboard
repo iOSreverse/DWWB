@@ -56,11 +56,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xve-Ba-Vgx" userLabel="转发的背景">
-                                            <rect key="frame" x="0.0" y="206" width="600" height="151"/>
+                                            <rect key="frame" x="0.0" y="83" width="600" height="151"/>
                                             <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="今天适合敲代码" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEy-Jr-s8d" userLabel="微博正文">
-                                            <rect key="frame" x="15" y="65" width="105" height="55"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="今天适合敲代码" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEy-Jr-s8d" userLabel="微博正文">
+                                            <rect key="frame" x="15" y="65" width="105" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="105" id="t58-3P-8Lz"/>
                                             </constraints>
@@ -69,7 +69,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCQ-kH-Hgk" userLabel="底部工具栏">
-                                            <rect key="frame" x="0.0" y="357" width="600" height="40"/>
+                                            <rect key="frame" x="0.0" y="234" width="600" height="40"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5Z-2V-7qN">
                                                     <rect key="frame" x="0.0" y="1" width="199" height="32"/>
@@ -151,8 +151,8 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-Rc-778" userLabel="图片的View" customClass="PicCollectionView" customModule="DWWB" customModuleProvider="target">
-                                            <rect key="frame" x="15" y="252" width="392" height="95"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-Rc-778" userLabel="图片的View" customClass="PicCollectionView" customModule="DWWB" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="129" width="392" height="95"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="392" id="fk1-by-aHE"/>
@@ -191,7 +191,7 @@
                                             </cells>
                                         </collectionView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天我来敲代码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-9X-U6W" userLabel="转发正文">
-                                            <rect key="frame" x="15" y="221" width="105" height="21"/>
+                                            <rect key="frame" x="15" y="98" width="105" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -233,11 +233,13 @@
                                         <mask key="constraints">
                                             <exclude reference="x1m-JJ-ApU"/>
                                             <exclude reference="K77-7E-ea6"/>
+                                            <exclude reference="TAC-rv-Zz9"/>
                                             <exclude reference="ZlU-9K-rt3"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="bottomToolView" destination="OCQ-kH-Hgk" id="yWm-Su-vqK"/>
                                     <outlet property="contentLabel" destination="LEy-Jr-s8d" id="45K-GZ-RTd"/>
                                     <outlet property="contentLabelWcons" destination="t58-3P-8Lz" id="xkh-Av-VhC"/>
                                     <outlet property="iconView" destination="tUF-e4-S2m" id="LgJ-cf-GPY"/>

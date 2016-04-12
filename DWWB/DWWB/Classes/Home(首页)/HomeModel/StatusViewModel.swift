@@ -12,6 +12,8 @@ class StatusViewModel: NSObject {
     // MARK: - 定义属性
     var status : Status?
 
+    var cellHeight : CGFloat = 0
+
     var sourceText : String?        //处理来源
     var createAtText : String?      //处理创建时间
     var verifiedImage : UIImage?    //处理用户认证图标

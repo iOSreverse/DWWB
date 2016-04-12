@@ -140,9 +140,14 @@ extension HomeViewController {
         // 2.给cell设置数据
         cell.viewModel = viewModels[indexPath.row]
 
-
-
         return cell
+    }
+
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        // 1.获取模型对象
+        let viewModel = viewModels[indexPath.row]
+
+        return viewModel.cellHeight
     }
 
 }

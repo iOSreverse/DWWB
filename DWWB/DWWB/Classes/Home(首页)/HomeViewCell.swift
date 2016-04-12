@@ -24,6 +24,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var picView: PicCollectionView!
     @IBOutlet weak var retweetedBgView: UIView!
+    @IBOutlet weak var bottomToolView: UIView!
     
 
 
@@ -94,6 +95,15 @@ class HomeViewCell: UITableViewCell {
                 // 3.设置转发正文距离顶部的约束
                 retweetedContentLabelTopCons.constant = 0
             }
+
+            // 12.计算cell的高度
+            if viewModel.cellHeight == 0 {
+                // 12.1强制布局
+                layoutIfNeeded()
+
+                // 12.2获取底部工具栏的最大Y值
+                viewModel.cellHeight = CGRectGetMaxY(bottomToolView.frame)
+            }
         }
     }
 
@@ -119,7 +129,6 @@ extension HomeViewCell {
 
         // 有配图需要约束有值
         picViewBottomCons.constant = 10
-
 
         // 2.取出picView对应的layput
         let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
