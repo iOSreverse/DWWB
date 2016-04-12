@@ -242,10 +242,12 @@
                                     <outlet property="contentLabelWcons" destination="t58-3P-8Lz" id="xkh-Av-VhC"/>
                                     <outlet property="iconView" destination="tUF-e4-S2m" id="LgJ-cf-GPY"/>
                                     <outlet property="picView" destination="D8V-Rc-778" id="Rbi-jQ-hLq"/>
+                                    <outlet property="picViewBottomCons" destination="dQY-k9-Ncg" id="cEB-FH-TrU"/>
                                     <outlet property="picViewHCons" destination="lAz-4o-smN" id="D7n-SY-y1O"/>
                                     <outlet property="picViewWCons" destination="fk1-by-aHE" id="qXu-oq-pM5"/>
                                     <outlet property="retweetedBgView" destination="xve-Ba-Vgx" id="2oq-9H-JIS"/>
                                     <outlet property="retweetedContentLabel" destination="2y2-9X-U6W" id="41h-31-XJf"/>
+                                    <outlet property="retweetedContentLabelTopCons" destination="nn4-QY-zFN" id="EVd-AI-oj7"/>
                                     <outlet property="screenNameLabel" destination="3tH-HO-GJV" id="KH7-C1-iXr"/>
                                     <outlet property="sourceLabel" destination="iXK-Yg-S1K" id="J92-pz-fZI"/>
                                     <outlet property="timeLabel" destination="ioM-nf-0Oi" id="qoK-q3-CmP"/>
