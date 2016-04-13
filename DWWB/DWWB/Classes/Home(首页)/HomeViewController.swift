@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import MJRefresh
 
 class HomeViewController: BaseViewController {
     
@@ -32,10 +33,10 @@ class HomeViewController: BaseViewController {
         setupNavigationBar()
 
         // 3.请求数据
-        loadStatuses()
-
-        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
+
+        // 4.布局header
+        setupHeaderView()
     }
 
 }
@@ -54,6 +55,23 @@ extension HomeViewController {
         titleBtn.addTarget(self, action: "titleBtnClick:", forControlEvents: .TouchUpInside)
         navigationItem.titleView = titleBtn
     }
+
+    private func setupHeaderView() {
+        // 1.创建headerView
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "loadNewStatus")
+
+        // 2.设置header的属性
+        header.setTitle("下拉刷新", forState: .Idle)
+        header.setTitle("松手刷新", forState: .Pulling)
+        header.setTitle("加载中...", forState: .Refreshing)
+
+        // 3.设置tableView的header
+        tableView.mj_header = header
+
+        // 4.进入刷新状态
+        tableView.mj_header.beginRefreshing()
+    }
+
 }
 
 
@@ -79,8 +97,20 @@ extension HomeViewController {
 
 // MARK: - 请求数据
 extension HomeViewController {
-    private func loadStatuses() {
-        NetworkTools.shareInstance.loadStatuses { (result, error) -> () in
+    /// 加载最新的数据
+    @objc private func loadNewStatus() {
+        loadStatuses(true)
+    }
+
+    /// 加载微博数据
+    private func loadStatuses(isNewData : Bool) {
+
+        // 1.回去since_id
+        var since_id = 0
+        if isNewData {
+            since_id = viewModels.first?.status?.mid ?? 0
+        }
+        NetworkTools.shareInstance.loadStatuses(since_id) { (result, error) -> () in
             // 1.错误校验
             if error != nil {
                 print(error)
@@ -93,14 +123,18 @@ extension HomeViewController {
             }
 
             // 3.遍历微博对应的字典
+            var tempViewModel = [StatusViewModel]()
             for statusDict in resultArray {
                 let status = Status(dict: statusDict)
                 let viewModel = StatusViewModel(status: status)
-                self.viewModels.append(viewModel)
+                tempViewModel.append(viewModel)
             }
 
-            // 4.缓存图片
-            self.cacheImages(self.viewModels)
+            // 4.将数据放入到成员变量的数组中
+            self.viewModels = tempViewModel + self.viewModels
+
+            // 5.缓存图片
+            self.cacheImages(tempViewModel)
 
 
         }
@@ -122,6 +156,8 @@ extension HomeViewController {
         // 2.刷新表格
         dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
             self.tableView.reloadData()
+
+            self.tableView.mj_header.endRefreshing()
         }
     }
 }
