@@ -19,6 +19,7 @@ class HomeViewController: BaseViewController {
     }
 
     private lazy var viewModels : [StatusViewModel] = [StatusViewModel]()
+    private lazy var tipLabel : UILabel = UILabel()
 
     // MARK: - 系统回调函数
     override func viewDidLoad() {
@@ -76,6 +77,21 @@ extension HomeViewController {
 
     private func setupFooterView() {
         tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction: "loadMoreStatus")
+    }
+
+    private func setupTipLabel() {
+        // 1.将tipLabel添加父控件
+        navigationController?.navigationBar.insertSubview(tipLabel, atIndex: 0)
+
+        // 2.设置tipLabel的frame
+        tipLabel.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: 32)
+
+        // 3.设置tipLabel的属性
+        tipLabel.backgroundColor = UIColor.orangeColor()
+        tipLabel.textColor = UIColor.whiteColor()
+        tipLabel.font = UIFont.systemFontOfSize(14)
+        tipLabel.textAlignment = .Center
+        tipLabel.hidden = true
     }
 }
 
@@ -176,10 +192,34 @@ extension HomeViewController {
         }
         // 2.刷新表格
         dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
+            // 刷新表格
             self.tableView.reloadData()
 
+            // 停止刷新
             self.tableView.mj_header.endRefreshing()
             self.tableView.mj_footer.endRefreshing()
+
+            // 显示提示的Label
+            self.showTipLabel(viewModels.count)
+
+        }
+    }
+
+    /// 显示提示的Label
+    private func showTipLabel(count : Int) {
+        // 1.设置tipLabel的属性
+        tipLabel.hidden = false
+        tipLabel.text = count == 0 ? "没有新数据" : "\(count) 条形微博"
+
+        // 2.执行动画
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.tipLabel.frame.origin.y = 44
+            }) { (_) -> Void in
+                UIView.animateWithDuration(1.0, delay: 1.5, options: [], animations: { () -> Void in
+                    self.tipLabel.frame.origin.y = 10
+                    }, completion: { (_) -> Void in
+                        self.tipLabel.hidden = true
+                })
         }
     }
 }
