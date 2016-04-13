@@ -60,8 +60,15 @@ class HomeViewCell: UITableViewCell {
             // 6.设置时间的Label
             timeLabel.text = viewModel.createAtText
 
-            // 7.设置来源
+            // 7.设置微博正文
             contentLabel.text = viewModel.status?.text
+
+            // 设置来源
+            if let sourceText = viewModel.sourceText {
+                sourceLabel.text = "来自" + sourceText
+            } else {
+                sourceLabel.text = nil
+            }
 
             // 8.设置昵称的文字颜色
             screenNameLabel.textColor = viewModel.vipImage == nil ? UIColor.blackColor() : UIColor.orangeColor()

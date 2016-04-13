@@ -37,6 +37,8 @@ class HomeViewController: BaseViewController {
 
         // 4.布局header
         setupHeaderView()
+
+        setupFooterView()
     }
 
 }
@@ -72,6 +74,9 @@ extension HomeViewController {
         tableView.mj_header.beginRefreshing()
     }
 
+    private func setupFooterView() {
+        tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction: "loadMoreStatus")
+    }
 }
 
 
@@ -102,15 +107,26 @@ extension HomeViewController {
         loadStatuses(true)
     }
 
+    /// 加载最新的数据
+    @objc private func loadMoreStatus() {
+        loadStatuses(false)
+    }
+
     /// 加载微博数据
     private func loadStatuses(isNewData : Bool) {
 
-        // 1.回去since_id
+        // 1.获取since_id/max_id
         var since_id = 0
+        var max_id = 0
         if isNewData {
             since_id = viewModels.first?.status?.mid ?? 0
+        } else {
+            max_id = viewModels.last?.status?.mid ?? 0
+            max_id = max_id == 0 ? 0 : (max_id - 1)
         }
-        NetworkTools.shareInstance.loadStatuses(since_id) { (result, error) -> () in
+
+        // 请求数据
+        NetworkTools.shareInstance.loadStatuses(since_id, max_id: max_id) { (result, error) -> () in
             // 1.错误校验
             if error != nil {
                 print(error)
@@ -131,7 +147,11 @@ extension HomeViewController {
             }
 
             // 4.将数据放入到成员变量的数组中
-            self.viewModels = tempViewModel + self.viewModels
+            if isNewData {
+                self.viewModels = tempViewModel + self.viewModels
+            } else {
+                self.viewModels += tempViewModel
+            }
 
             // 5.缓存图片
             self.cacheImages(tempViewModel)
@@ -140,6 +160,7 @@ extension HomeViewController {
         }
     }
 
+    /// 缓存图片
     private func cacheImages(viewModels : [StatusViewModel]) {
         // 0.创建group
         let group = dispatch_group_create()
@@ -158,6 +179,7 @@ extension HomeViewController {
             self.tableView.reloadData()
 
             self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
         }
     }
 }
