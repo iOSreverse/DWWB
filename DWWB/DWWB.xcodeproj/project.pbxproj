@@ -37,6 +37,7 @@
 		8EB76F781CBF2A16008D98CD /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB76F761CBF2A16008D98CD /* ComposeViewController.swift */; };
 		8EB76F791CBF2A16008D98CD /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB76F771CBF2A16008D98CD /* ComposeViewController.xib */; };
 		8EB76F7D1CBF2EBC008D98CD /* ComposeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB76F7C1CBF2EBC008D98CD /* ComposeTitleView.swift */; };
+		8EB76F7F1CBF3BBA008D98CD /* ComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB76F7E1CBF3BBA008D98CD /* ComposeTextView.swift */; };
 		8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */; };
 		8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */; };
 		8ED1D5A91CB02FB7006B3698 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */; };
@@ -83,6 +84,7 @@
 		8EB76F761CBF2A16008D98CD /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		8EB76F771CBF2A16008D98CD /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
 		8EB76F7C1CBF2EBC008D98CD /* ComposeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTitleView.swift; sourceTree = "<group>"; };
+		8EB76F7E1CBF3BBA008D98CD /* ComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTextView.swift; sourceTree = "<group>"; };
 		8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				8EB76F771CBF2A16008D98CD /* ComposeViewController.xib */,
 				8EB76F761CBF2A16008D98CD /* ComposeViewController.swift */,
 				8EB76F7C1CBF2EBC008D98CD /* ComposeTitleView.swift */,
+				8EB76F7E1CBF3BBA008D98CD /* ComposeTextView.swift */,
 			);
 			path = Compose;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */,
 				8E0E336D1CB947550095FD66 /* NSDate-Extension.swift in Sources */,
 				8E606CBC1CB4118D00DBD8EC /* BaseViewController.swift in Sources */,
+				8EB76F7F1CBF3BBA008D98CD /* ComposeTextView.swift in Sources */,
 				8E3580BB1CB9F9E40098B7BD /* HomeViewCell.swift in Sources */,
 				8E6939651CB54F7900C0123C /* PopoverAnimator.swift in Sources */,
 				8E25EBEB1CB5301900C16828 /* WDWPresentationController.swift in Sources */,

@@ -13,7 +13,21 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zya-I6-baV" customClass="ComposeTextView" customModule="DWWB" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Zya-I6-baV" secondAttribute="bottom" id="9dg-8q-0KZ"/>
+                <constraint firstItem="Zya-I6-baV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HOQ-uH-qCI"/>
+                <constraint firstAttribute="trailing" secondItem="Zya-I6-baV" secondAttribute="trailing" id="XPL-2N-j10"/>
+                <constraint firstItem="Zya-I6-baV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wOr-S9-i91"/>
+            </constraints>
         </view>
     </objects>
 </document>
