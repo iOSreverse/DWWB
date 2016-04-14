@@ -11,6 +11,8 @@ import UIKit
 class ComposeViewController: UIViewController {
     // MARK: - 懒加载属性
     private lazy var titleView : ComposeTitleView = ComposeTitleView()
+    @IBOutlet weak var textView: ComposeTextView!
+
 
     // MARK: - 系统回调函数
     override func viewDidLoad() {
@@ -18,6 +20,12 @@ class ComposeViewController: UIViewController {
 
         // 设置导航栏
         setupNavigationBar()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        textView.becomeFirstResponder()
     }
 }
 
@@ -44,5 +52,17 @@ extension ComposeViewController {
 
     @objc private func sendItemClick() {
         print("sendItemClick")
+    }
+}
+
+// MARK: - UITextView的代理
+extension ComposeViewController : UITextViewDelegate {
+    func textViewDidChange(textView: UITextView) {
+        self.textView.placeHolderLabel.hidden = textView.hasText()
+        navigationItem.rightBarButtonItem?.enabled = textView.hasText()
+    }
+
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        textView.resignFirstResponder()
     }
 }
