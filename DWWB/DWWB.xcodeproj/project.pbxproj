@@ -34,6 +34,9 @@
 		8E606CBE1CB411C900DBD8EC /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E606CBD1CB411C900DBD8EC /* VisitorView.swift */; };
 		8E606CC01CB411F200DBD8EC /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E606CBF1CB411F200DBD8EC /* VisitorView.xib */; };
 		8E6939651CB54F7900C0123C /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6939641CB54F7900C0123C /* PopoverAnimator.swift */; };
+		8EB76F781CBF2A16008D98CD /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB76F761CBF2A16008D98CD /* ComposeViewController.swift */; };
+		8EB76F791CBF2A16008D98CD /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB76F771CBF2A16008D98CD /* ComposeViewController.xib */; };
+		8EB76F7D1CBF2EBC008D98CD /* ComposeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB76F7C1CBF2EBC008D98CD /* ComposeTitleView.swift */; };
 		8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */; };
 		8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */; };
 		8ED1D5A91CB02FB7006B3698 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */; };
@@ -77,6 +80,9 @@
 		8E606CBD1CB411C900DBD8EC /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		8E606CBF1CB411F200DBD8EC /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		8E6939641CB54F7900C0123C /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
+		8EB76F761CBF2A16008D98CD /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		8EB76F771CBF2A16008D98CD /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		8EB76F7C1CBF2EBC008D98CD /* ComposeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTitleView.swift; sourceTree = "<group>"; };
 		8ED1D5A21CB02BA5006B3698 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A61CB02FA0006B3698 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		8ED1D5A81CB02FB7006B3698 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +240,7 @@
 		8E6A12751CB0282100CC399B /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				8EB76F751CBF2944008D98CD /* Compose */,
 				8EF3D0FE1CB80B4400A2D396 /* Welcome */,
 				8E28DC111CB3D6200082E044 /* Resource */,
 				8E606CBA1CB4113500DBD8EC /* Visitor */,
@@ -259,6 +266,16 @@
 				8ED1D5AA1CB02FCF006B3698 /* ProfileViewController.swift */,
 			);
 			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		8EB76F751CBF2944008D98CD /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				8EB76F771CBF2A16008D98CD /* ComposeViewController.xib */,
+				8EB76F761CBF2A16008D98CD /* ComposeViewController.swift */,
+				8EB76F7C1CBF2EBC008D98CD /* ComposeTitleView.swift */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 		8EE025FA1CB01F36001E6D70 = {
@@ -362,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB76F791CBF2A16008D98CD /* ComposeViewController.xib in Resources */,
 				8EE0260E1CB01F36001E6D70 /* Assets.xcassets in Resources */,
 				8E350F641CB3E65E00A71F63 /* Null.storyboard in Resources */,
 				8E350F681CB3E82800A71F63 /* Profile.storyboard in Resources */,
@@ -436,11 +454,13 @@
 				8EF3D1001CB80C6F00A2D396 /* WelcomeViewController.swift in Sources */,
 				8E2A992D1CB92826005E2139 /* Status.swift in Sources */,
 				8E327C441CB6496800613314 /* UserAccount.swift in Sources */,
+				8EB76F7D1CBF2EBC008D98CD /* ComposeTitleView.swift in Sources */,
 				8ED1D5AB1CB02FCF006B3698 /* ProfileViewController.swift in Sources */,
 				8E606CB91CB4056100DBD8EC /* UIButton-Extension.swift in Sources */,
 				8E25EBE41CB51FC900C16828 /* UIBarButtonItem-Extension.swift in Sources */,
 				8EE026071CB01F36001E6D70 /* AppDelegate.swift in Sources */,
 				8E327C3B1CB602DC00613314 /* OAuthViewController.swift in Sources */,
+				8EB76F781CBF2A16008D98CD /* ComposeViewController.swift in Sources */,
 				8E25EBE81CB521D500C16828 /* PopoverViewController.swift in Sources */,
 				8ED1D5A31CB02BA5006B3698 /* MainViewController.swift in Sources */,
 				8ED1D5A71CB02FA0006B3698 /* MessageViewController.swift in Sources */,
