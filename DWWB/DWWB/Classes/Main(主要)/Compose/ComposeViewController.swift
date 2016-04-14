@@ -13,6 +13,8 @@ class ComposeViewController: UIViewController {
     private lazy var titleView : ComposeTitleView = ComposeTitleView()
     @IBOutlet weak var textView: ComposeTextView!
 
+    // MARK: - 约束的属性
+    @IBOutlet weak var toolBarBottomCons: NSLayoutConstraint!
 
     // MARK: - 系统回调函数
     override func viewDidLoad() {
@@ -20,12 +22,19 @@ class ComposeViewController: UIViewController {
 
         // 设置导航栏
         setupNavigationBar()
+
+        // 监听通知
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillChangeFrame:", name: UIKeyboardDidChangeFrameNotification, object: nil)
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
         textView.becomeFirstResponder()
+    }
+
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }
 
@@ -53,6 +62,24 @@ extension ComposeViewController {
     @objc private func sendItemClick() {
         print("sendItemClick")
     }
+
+    @objc private func keyboardWillChangeFrame(note : NSNotification) {
+        // 1.获取动画执行的时间
+        let duration = note.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
+
+        // 2.获取键盘最终Y值
+        let endFrame = (note.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let y = endFrame.origin.y
+
+        // 3.计算工具栏距离底部的间距
+        let margin = UIScreen.mainScreen().bounds.height - y
+
+        // 4.执行动画
+        toolBarBottomCons.constant = margin
+        UIView.animateWithDuration(duration) { () -> Void in
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
 // MARK: - UITextView的代理
@@ -66,3 +93,7 @@ extension ComposeViewController : UITextViewDelegate {
         textView.resignFirstResponder()
     }
 }
+
+
+
+
